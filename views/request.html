@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+    <script src="/javascripts/libraries/jquery-1.10.2.min.js"></script>
+    <script src="/javascripts/request.js"></script> <!-- this how to include this here because public is already loaded in middleware in app.js -->
+
+
+
+    <!-- Trying to figure out how to include js files. Trying all possibilities then looking at chrome dev tools to see which line
+    loaded successfully without a 404 status. This hack did the trick
+    <script src="../public/javascripts/request.js"></script>
+    <script src="/public/javascripts/request.js"></script>
+    <script src="request.js"></script>
+    <script src="./request.js"></script>
+    <script src="request.js"></script>
+    <script src="/node_modules/public/javascripts/request.js"></script> -->
+
+
+</head>
+
+<body>
+
+<h1> Welcome to KikaMobile </h1>
+<h2> Testing Requests to NodeJS Server </h2>
+<p> Patient Checkin </p>
+<ul id="patient">
+    <li> Patient Entry </li>
+    <ul id="name">
+        <li> Lalibela, Lucy </li>
+    </ul>
+    <li class='Patient Gender'> Patient Gender </li>
+    <ul id="gender">
+        <li> Female </li>
+    </ul>
+</ul>
+
+<li class="database" data-price='databasenum'> <!--We can add this HTML5 data attribute to <li> element data jquery methods .data(<name>), .data(<name>, <value>)  getter,setter methods respectively; "vacation onsale" associates element with 2-classes: 1) vacation 2) onsale -->
+    <h3> Patient Data Retrieval</h3>
+    <button> Get Data </button>
+    <ul class='databasename'></ul>
+    <ul class='databaseurl'>
+        <li>Patient ID</li>
+        <li>Patient Phone# </li>
+    </ul>
+</li>
+
+</body>
+</html>
